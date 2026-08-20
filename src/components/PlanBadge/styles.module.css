@@ -1,0 +1,82 @@
+/**
+ * Plan badge. Fills are derived from the brand palette in src/css/custom.css:
+ * the indigo primary carries the Free to Premium ramp, the orange secondary
+ * marks the top tier. Light mode uses the dark end of the ramp with white text,
+ * dark mode the light end with dark text, so contrast holds in both.
+ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  background-color: var(--md-badge-bg);
+  color: var(--md-badge-fg);
+}
+
+/* Headings set their own weight and size on descendants, so restate ours. */
+h1 .badge,
+h2 .badge,
+h3 .badge,
+h4 .badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.free {
+  --md-badge-bg: #6f6f7e;
+  --md-badge-fg: #ffffff;
+}
+
+.basic {
+  --md-badge-bg: #5b45e6;
+  --md-badge-fg: #ffffff;
+}
+
+.pro {
+  --md-badge-bg: #2e14c4;
+  --md-badge-fg: #ffffff;
+}
+
+.premium {
+  --md-badge-bg: #1c0c78;
+  --md-badge-fg: #ffffff;
+}
+
+.unlimited {
+  --md-badge-bg: #f04a28;
+  --md-badge-fg: #ffffff;
+}
+
+[data-theme='dark'] .free {
+  --md-badge-bg: #a3a3b2;
+  --md-badge-fg: #17171f;
+}
+
+[data-theme='dark'] .basic {
+  --md-badge-bg: #b6a9f7;
+  --md-badge-fg: #17103f;
+}
+
+[data-theme='dark'] .pro {
+  --md-badge-bg: #8774f1;
+  --md-badge-fg: #14104a;
+}
+
+[data-theme='dark'] .premium {
+  --md-badge-bg: #6a54ee;
+  --md-badge-fg: #ffffff;
+}
+
+[data-theme='dark'] .unlimited {
+  --md-badge-bg: #f47056;
+  --md-badge-fg: #2b0d05;
+}
