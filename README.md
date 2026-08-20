@@ -1,43 +1,27 @@
-# Website
+# myDiagnostic documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Public documentation site for myDiagnostic, the Shopify quiz and product recommendation app by Webesencia.
 
-## Installation
+The site is built with [Docusaurus](https://docusaurus.io/) (classic preset, TypeScript). Documentation pages live in `docs/`, the sidebar structure in `sidebars.ts`, and site settings in `docusaurus.config.ts`.
+
+## Local development
 
 ```bash
 npm install
+npm start
 ```
 
-**Note**: feel free to use the package manager of your choice.
+The dev server runs on http://localhost:3000 and reloads on save.
 
-## Local Development
-
-```bash
-npm run start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+To check the production output locally:
 
 ```bash
 npm run build
+npm run serve
 ```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Deployment
 
-Using SSH:
+Every push to `main` triggers the workflow in `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. The workflow can also be started manually from the Actions tab.
 
-```bash
-USE_SSH=true npm run deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The published site is served at https://docs.webesencia.com, configured through `static/CNAME`.
