@@ -1,7 +1,7 @@
 # Documentation plan
 
-Writing contract for the twenty pages of the site. One entry per page: the objective, the questions
-the page has to answer, and the screenshots it needs.
+Writing contract for the twenty-four pages of the site. One entry per page: the objective, the
+questions the page has to answer, and the screenshots it needs.
 
 This file lives at the repository root, outside `docs/`, so it is not published.
 
@@ -26,8 +26,8 @@ Left navigation of the app: the quiz list (home), **Settings**, **Plans & Billin
 Inside a quiz, six tabs: **Questions**, **Scenarios**, **Design**, **Analytics**, **Responses**,
 **Settings**.
 
-A quiz is **Draft**, **Active** or **Paused**. Page types in the quiz sidebar: **Welcome**,
-**Question**, **Content page**, **Email gate**, **Results**.
+A quiz is **Draft** or **Active**. Page types in the quiz sidebar: **Welcome**, **Question**,
+**Content page**, **Email gate**, **Results**.
 
 ---
 
@@ -120,13 +120,15 @@ recommendation.
 
 - How do I create a quiz, and what do I set at creation: **Quiz name** and **Default language**.
 - What is the quiz name used for: the admin only, customers never see it.
-- What does a new quiz already contain: a welcome page, a first question, a result page.
+- What does a new quiz contain: no pages at creation. The **Email gate** and **Results** rows appear
+  the first time the quiz is opened in the editor; the welcome page and every question are added by
+  the merchant.
 - How do I add a question and write its answers.
 - How do I attach products to an answer so the answers count towards a recommendation.
 - How do I check the result before publishing, with the preview.
 - How do I publish: the **Publish** button, and how the badge moves from **Draft** to **Active**.
-- Why can I not publish a second quiz on the Free plan: one quiz per shop, unpublish one to publish
-  another.
+- Why can I not publish a second quiz on the Free plan: one published quiz per shop, unpublish one
+  to publish another. Drafts do not count against that limit.
 - What is the minimum viable quiz: at least one question, and enough products attached to answers to
   fill a trio of three.
 
@@ -195,7 +197,7 @@ products into advice.
 - Which images does a scenario take, desktop and mobile, and where do they show.
 - Why do I need the Basic plan or above to use scenarios at all.
 - How do I check which scenario a real customer landed on: the **Analytics** tab, scenario
-  distribution.
+  distribution, see [Analytics](/docs/building-quizzes/analytics).
 
 **Screenshots: 4.**
 
@@ -286,7 +288,8 @@ what happens once it is submitted.
   [Result email](/docs/customising/result-email).
 - Can the customer reach the result without giving an address.
 - Where do collected addresses go: the **Responses** tab, the CSV export, and the connected email
-  platform when Klaviyo or Mailchimp is set up.
+  platform when Klaviyo or Mailchimp is set up, see
+  [Klaviyo and Mailchimp](/docs/distribution/integrations).
 - What is the **Contact tag** used for on the addresses pushed to an email platform.
 - How do I measure the gate: **Emails collected** and its share of responses, on the **Analytics**
   tab.
@@ -299,7 +302,57 @@ what happens once it is submitted.
 
 ---
 
-## 10. Design and tokens
+## 10. Result screen
+
+`docs/building-quizzes/result-screen.mdx`, sidebar position 6 in Building quizzes.
+
+**Objective.** Describe what the visitor sees at the end of the quiz and every control behind it:
+the product cards, the add to cart modes, the discount, the sold out handling, the editorial
+placement, and the personalised copy.
+
+**Scope, fixed by audit** (see Verified 24 August 2026, item 9): product cards capped at 280px on
+desktop, one or two per row on mobile depending on the setting; second image on hover, opt-in and
+only when the product has two images; price opt-in; description pulled from a product metafield;
+call to action in three modes, bundle, individual, or both; what happens after an add configurable
+per mode; the discount code carried by the bundle only; sold out products shown with a badge and a
+disabled button, and skipped by the bundle with a note; editorial content above or below the cards;
+the scenario image; personalisation through `{name}`, `{age}` and `{custom.*}`. The widget
+refreshes the theme's cart and its drawer but never opens the drawer itself.
+
+**Screenshots: 3.** One only where the text cannot say it.
+
+1. A full result screen on a storefront: labelled trio, prices, bundle button, editorial below.
+2. The second image hover swap, resting and hovered states side by side.
+3. A sold out card with its badge, next to the bundle note saying the bundle skips it.
+
+**PlanBadge: none.** Every control on this screen is a quiz setting, available on every plan. The
+only plan-driven element is the "Powered by" badge, shown on Free only, covered in
+[Plans and quotas](/docs/account/plans-and-quotas).
+
+---
+
+## 11. Analytics
+
+`docs/building-quizzes/analytics.mdx`, sidebar position 7 in Building quizzes.
+
+**Objective.** Read the **Analytics** tab: total responses, emails collected and their rate, and
+the scenario distribution, over a chosen period.
+
+**Scope, fixed by audit** (see Verified 24 August 2026, item 10): the tab shows total responses,
+emails collected, the email rate, and the distribution of responses per scenario including the
+generic result row, filtered over the last 7 days, the last 30 days, or all time. The CSV export
+lives on the **Responses** tab, not here; say so and link it.
+
+**Screenshots: 1.**
+
+1. The **Analytics** tab with the two KPI cards and the scenario distribution bars, including a
+   **Generic result** row.
+
+**PlanBadge: none.** The tab exists on every plan.
+
+---
+
+## 12. Design and tokens
 
 `docs/customising/design-tokens.mdx`, sidebar position 1 in Customising.
 
@@ -333,7 +386,7 @@ and per page overrides.
 
 ---
 
-## 11. App wording
+## 13. App wording
 
 `docs/customising/app-wording.mdx`, sidebar position 2 in Customising.
 
@@ -364,7 +417,7 @@ writes on each page.
 
 ---
 
-## 12. Result email (Pro plan and above)
+## 14. Result email
 
 `docs/customising/result-email.mdx`, sidebar position 3 in Customising.
 
@@ -375,8 +428,10 @@ writes on each page.
 - What triggers the result email, and which address it goes to.
 - How do I turn sending on for a quiz: **Send results by email** in the quiz **Settings**.
 - What does the customer receive: the recommendation, and a permanent link back to the result.
-- How do I send through my own server rather than the app's: the **Email sending** card in the app
-  **Settings**, and what a wrong setting looks like.
+- How do I send through my own server rather than the app's: see
+  [Send with your own mail server](/docs/customising/email-sending).
+- Which parts need the Pro plan or above: the branding and wording of the email (logo, colours,
+  subject, intro, button label, footer). Sending itself is not gated by plan.
 - How do I change the subject, the intro, the button label and the footer.
 - How do I set the logo and the colours of the email, and which formatting controls exist.
 - Why does the email look plainer than the quiz: email clients support far less than a browser, so
@@ -388,16 +443,40 @@ writes on each page.
 - How do I test the email before a customer receives one.
 - What happens when sending fails.
 
-**Screenshots: 4.**
+**Screenshots: 3.**
 
 1. **Send results by email** in the quiz **Settings**.
 2. The **Result email** card in the app **Settings**.
-3. The **Email sending** card configured for a merchant server.
-4. The received email, rendered in a mail client of the demonstration store.
+3. The received email, rendered in a mail client of the demonstration store.
 
 ---
 
-## 13. Permalink
+## 15. Send with your own mail server (Pro plan and above)
+
+`docs/customising/email-sending.mdx`, sidebar position 4 in Customising.
+
+**Objective.** Configure the **Email sending** card in the app **Settings**: the sender identity on
+every plan, and the merchant's own mail server on Pro and above, with its connection test.
+
+**Facts, fixed by audit** (see Verified 24 August 2026, item 4): by default the result email goes
+out through the app's own sending infrastructure, carrying the merchant's sender name and using the
+merchant's address as Reply-To; both are configurable on every plan. On Pro and above the merchant
+can route sending through their own mail server instead; that path is used only once the connection
+test has passed and the configuration is enabled, and anything else falls back to the default path.
+After a downgrade the configuration is kept but the app path takes over. Never name the app's
+underlying email provider in the public documentation.
+
+**Screenshots: 1.**
+
+1. The **Email sending** card configured for a merchant server, with the connection test result
+   visible.
+
+**PlanBadge: Pro** on the own-server section. The sender name and Reply-To are available on every
+plan and carry no badge.
+
+---
+
+## 16. Permalink
 
 `docs/distribution/permalink.mdx`, sidebar position 1 in Distribution.
 
@@ -431,7 +510,7 @@ is written.
 
 ---
 
-## 14. Secondary languages (Premium plan and above)
+## 17. Secondary languages (Premium plan and above)
 
 `docs/distribution/secondary-languages.mdx`, sidebar position 2 in Distribution.
 
@@ -452,7 +531,9 @@ is written.
   against the languages the quiz serves, falling back to the quiz default.
 - Are regional variants handled, such as a store in `fr-CA` on a quiz serving `fr`.
 - Does the result email follow the same language as the quiz.
-- What happens to my translations if I downgrade below Premium.
+- What happens to my translations if I downgrade below Premium: the translations are kept, the
+  languages above the new plan's allowance stop being served to visitors, and a notice in the admin
+  names the quizzes and languages concerned.
 
 **Screenshots: 3.**
 
@@ -462,7 +543,29 @@ is written.
 
 ---
 
-## 15. Plans and quotas
+## 18. Klaviyo and Mailchimp (Pro plan and above)
+
+`docs/distribution/integrations.mdx`, sidebar position 3 in Distribution.
+
+**Objective.** Push consenting quiz respondents to a Klaviyo or Mailchimp list, per quiz, with a
+contact tag; connect, test, and understand exactly when a respondent is synced.
+
+**Facts, fixed by audit** (see Verified 24 August 2026, item 3): both integrations exist, on Pro
+and above. They are configured per quiz, in the quiz **Settings**, with a connection test per
+service. A respondent is synced only when they gave the explicit marketing opt-in on the email
+gate; the transactional result email is not conditioned on that consent. Below the plan, the saved
+configuration is kept but the synchronisation is skipped, and it resumes on upgrade.
+
+**Screenshots: 1.**
+
+1. The integrations card in the quiz **Settings**, one service connected, with the contact tag
+   field and the connection test result.
+
+**PlanBadge: Pro.**
+
+---
+
+## 19. Plans and quotas
 
 `docs/account/plans-and-quotas.mdx`, sidebar position 1 in Account.
 
@@ -477,11 +580,15 @@ is written.
 - What happens when I reach it: visitors see a temporarily unavailable message instead of the quiz,
   until the next month or until I upgrade.
 - What warns me before that: a banner at 80% of the limit, then a critical banner at the limit.
-- How many quizzes can I keep: 1 on Free, 3 on Basic, 10 on Pro, 25 on Premium, unlimited on
-  Unlimited, and what counts against that limit.
+- How many quizzes can I keep published at once: 1 on Free, 3 on Basic, 10 on Pro, 25 on Premium,
+  unlimited on Unlimited. Only **Active** quizzes count; drafts do not, and are unlimited.
+- What happens at the quiz cap: publishing another quiz is refused, and creating a new quiz is
+  refused too, but duplicating an existing quiz stays possible because the copy is created as a
+  draft.
 - What is the myDiagnostic badge on the quiz, and which plan removes it: any paid plan.
 - How do I upgrade or downgrade, and when does the change take effect.
-- What happens to quizzes above the limit of the plan I downgrade to.
+- What happens to quizzes above the limit of the plan I downgrade to: the most recently created
+  ones are unpublished back to draft, and a banner in the app names them.
 - Where is the full feature grid: [Plan comparison](/docs/reference/plan-comparison).
 
 **Screenshots: 3.**
@@ -492,7 +599,7 @@ is written.
 
 ---
 
-## 16. Data and privacy
+## 20. Data and privacy
 
 `docs/account/data-and-privacy.mdx`, sidebar position 2 in Account.
 
@@ -509,7 +616,6 @@ is written.
 - How does the app answer a customer data request coming from Shopify.
 - How does the app answer a customer deletion request coming from Shopify.
 - What happens to all shop data when the app is uninstalled.
-- How long are responses kept before automatic deletion.
 - Which third parties receive data, and only when I connect them: Klaviyo, Mailchimp, and the mail
   server I configure.
 - Which privacy policy and terms links appear to my customers, and where I set them.
@@ -523,7 +629,7 @@ is written.
 
 ---
 
-## 17. Glossary
+## 21. Glossary
 
 `docs/reference/glossary.mdx`, sidebar position 1 in Reference.
 
@@ -545,7 +651,7 @@ app wording.
 
 ---
 
-## 18. Plan comparison
+## 22. Plan comparison
 
 `docs/reference/plan-comparison.mdx`, sidebar position 2 in Reference.
 
@@ -574,7 +680,7 @@ publishing, and update in the same commit as any change to that grid.
 
 ---
 
-## 19. Troubleshooting
+## 23. Troubleshooting
 
 `docs/troubleshooting.mdx`, sidebar position 8.
 
@@ -596,7 +702,8 @@ publishing, and update in the same commit as any change to that grid.
 - The email arrives with a broken layout.
 - A product shows as sold out or is missing from the result.
 - My second language is not served to visitors.
-- I cannot publish another quiz: the plan limit.
+- I cannot publish another quiz, or create a new one: the plan limit counts published quizzes.
+  Unpublish one, duplicate instead (a duplicate is a draft), or upgrade.
 - I cannot save: the unsaved changes bar, and what **Discard** does.
 
 **Question format.** Each section states the symptom, then a short ordered list of checks, most
@@ -609,7 +716,7 @@ likely cause first, each check ending in a concrete action.
 
 ---
 
-## 20. Frequently asked questions
+## 24. Frequently asked questions
 
 `docs/faq.mdx`, sidebar position 9.
 
@@ -644,6 +751,47 @@ that is not answered in full somewhere else on the site.
 
 ## Totals
 
-Twenty pages, 52 planned screenshots, spread across
+Twenty-four pages, 57 planned screenshots, spread across
 `static/img/{getting-started,building-quizzes,customising,distribution,account}/`.
 The Reference section and the FAQ carry none by design.
+
+---
+
+## Verified 24 August 2026
+
+Facts established by a read-only audit of the app source
+(`/Users/david/Documents/myDiagnostic-backup`) on 24 August 2026. Future page work starts from
+these; do not re-derive them from memory, from older entries of this file, or from the resumption
+document. Where an entry above and this list disagree, this list wins.
+
+1. A new quiz contains no pages at creation. The email gate and result pages are bootstrapped the
+   FIRST TIME the quiz is opened in the admin, not at creation. No welcome page and no first
+   question exist until the merchant adds them.
+2. The quiz cap counts ACTIVE (published) quizzes. Drafts do not count and are unlimited to keep.
+   Nuance: at the cap, publishing is refused AND creating a new quiz is refused, but duplicating
+   into a draft remains allowed.
+3. Klaviyo and Mailchimp exist, Pro plan and above, configured per quiz in the quiz Settings, with
+   a connection test. Synchronisation happens only with the visitor's explicit marketing opt-in.
+   Below the plan, the configuration is kept but synchronisation is skipped.
+4. Merchant mail server: exists, Pro plan and above, configured in the global Settings with a
+   connection test. Used only when tested and enabled; otherwise the app's own infrastructure
+   sends, with the merchant's sender name and their address as Reply-To. Never name the underlying
+   email provider in the public documentation.
+5. Result email template: personalisation is Pro and above; the compliance fields (legal links,
+   notification address) are available on every plan, including Free.
+6. Multi-language: Premium serves 1 secondary locale, Unlimited serves unlimited. After a
+   downgrade, the excess locales stop being served and a notice naming them appears in the admin.
+7. The "Powered by" branding badge appears on Free only.
+8. DO NOT document: automatic response retention (the mechanism exists in the code but its
+   activation is not confirmed; promise nothing), the paused status, any cart or order
+   attribution, any conversion KPI.
+9. Result screen, as implemented: product cards (280px max on desktop, 1 or 2 per row on mobile by
+   setting), second image on hover (opt-in, only when the product has two images), price
+   (opt-in), description from a product metafield, CTA in three modes (bundle / individual /
+   both), after-add behaviour configurable per mode, discount carried by the bundle only, sold out
+   products (badge, disabled button, skipped by the bundle with a note), editorial content above
+   or below the cards, scenario image, personalisation via `{name}`, `{age}`, `{custom.*}`. The
+   widget refreshes the theme's cart but never opens the drawer itself.
+10. Analytics tab, as implemented: total responses, emails collected, email rate, scenario
+    distribution including the generic result, filter over 7 days / 30 days / all time. The CSV
+    export lives on the Responses page, not on Analytics.
