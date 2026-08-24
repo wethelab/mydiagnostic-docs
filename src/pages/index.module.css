@@ -3,16 +3,48 @@
  * and scoped locally.
  */
 
+/*
+ * Hero: cream band with two very soft brand-tinted glows, dark title,
+ * indigo CTA. The extra bottom padding leaves room for the features
+ * card on the homepage to overlap the seam.
+ */
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0 7rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: var(--md-cream);
+  background-image: radial-gradient(
+      42rem 22rem at 12% 0%,
+      rgba(46, 20, 196, 0.07),
+      transparent 60%
+    ),
+    radial-gradient(
+      36rem 20rem at 88% 100%,
+      rgba(240, 74, 40, 0.08),
+      transparent 60%
+    );
+  color: var(--md-ink);
+}
+
+[data-theme='dark'] .heroBanner {
+  background-color: #191927;
+  background-image: radial-gradient(
+      42rem 22rem at 12% 0%,
+      rgba(135, 116, 241, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      36rem 20rem at 88% 100%,
+      rgba(244, 112, 86, 0.1),
+      transparent 60%
+    );
+  color: var(--ifm-font-color-base);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 3rem 2rem 6rem;
   }
 }
 
