@@ -149,6 +149,11 @@
   }
 }
 
+/* The app icon is a full-bleed indigo square: round it at display time. */
+.navbar__logo img {
+  border-radius: 6px;
+}
+
 /* Active navbar item: indigo text, orange marker underneath. */
 .navbar__link--active {
   position: relative;
@@ -163,6 +168,65 @@
   height: 2px;
   border-radius: 2px;
   background-color: var(--md-orange);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Local search (@easyops-cn/docusaurus-search-local). Themed through the */
+/* plugin's documented --search-local-* variables plus the Infima navbar  */
+/* input variables. One plugin variable colors both the highlighted terms */
+/* and the active row, so both stay indigo; orange stays on link hovers.  */
+/* Every variable set here is mode-dependent and MUST be declined in the  */
+/* dark block: a defined variable disables the plugin's own dark fallback.*/
+/* ---------------------------------------------------------------------- */
+
+:root {
+  --search-local-modal-background: #ffffff;
+  --search-local-modal-shadow: 0 6px 24px rgba(26, 21, 35, 0.14),
+    0 0 0 1px rgba(26, 21, 35, 0.08);
+  --search-local-hit-background: #ffffff;
+  --search-local-hit-shadow: 0 1px 3px rgba(26, 21, 35, 0.08);
+  --search-local-hit-color: var(--md-ink);
+  --search-local-muted-color: #6b6580;
+  --search-local-highlight-color: #2e14c4;
+  --search-local-hit-active-color: #ffffff;
+
+  --ifm-navbar-search-input-background-color: #ffffff;
+  --ifm-navbar-search-input-color: var(--md-ink);
+  --ifm-navbar-search-input-placeholder-color: #6b6580;
+}
+
+[data-theme='dark'] {
+  --search-local-modal-background: #1d1d2b;
+  --search-local-modal-shadow: 0 6px 24px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+  --search-local-hit-background: #262637;
+  --search-local-hit-shadow: none;
+  --search-local-hit-color: #e4e2ec;
+  --search-local-muted-color: #a49ec0;
+  /* Light indigo: readable as mark text on the dark hit background, and
+     dark ink flips onto it for the active row via hit-active-color. */
+  --search-local-highlight-color: #a091f4;
+  --search-local-hit-active-color: #17103f;
+
+  --ifm-navbar-search-input-background-color: #262637;
+  --ifm-navbar-search-input-color: #e4e2ec;
+  --ifm-navbar-search-input-placeholder-color: #a49ec0;
+}
+
+.navbar__search-input {
+  border: 1px solid rgba(26, 21, 35, 0.15);
+}
+
+/* Wider field at rest on desktop. Infima defaults it to 12.5rem (200px);
+   below 997px the plugin's own responsive behavior keeps control. */
+@media (min-width: 997px) {
+  .navbar__search-input {
+    width: 300px;
+  }
+}
+
+[data-theme='dark'] .navbar__search-input {
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 /* ---------------------------------------------------------------------- */

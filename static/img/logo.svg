@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="myDiagnostic">
-  <rect width="200" height="200" rx="44" fill="#2E14C4"/>
-  <rect x="48" y="62" width="104" height="18" rx="9" fill="#F4F1E6"/>
-  <rect x="48" y="91" width="104" height="18" rx="9" fill="#F04A28"/>
-  <rect x="48" y="120" width="104" height="18" rx="9" fill="#F4F1E6"/>
-</svg>

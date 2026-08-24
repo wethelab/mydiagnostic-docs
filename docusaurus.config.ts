@@ -31,6 +31,20 @@ const config: Config = {
     locales: ['en'],
   },
 
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: '/docs',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -58,7 +72,7 @@ const config: Config = {
       title: 'myDiagnostic',
       logo: {
         alt: 'myDiagnostic',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -66,6 +80,12 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
+        },
+        // Explicit search item: renders the bar within the right-side items,
+        // before the color mode toggle, which the theme always appends after.
+        {
+          type: 'search',
+          position: 'right',
         },
       ],
     },
