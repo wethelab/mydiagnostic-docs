@@ -145,33 +145,50 @@ recommendation.
 
 `docs/building-quizzes/questions-and-answers.mdx`, sidebar position 1 in Building quizzes.
 
-**Objective.** Build the question sequence: question types, answer sets, and how each question is
-displayed.
+**Objective.** Build the question sequence: adding questions, writing their answers, attaching the
+products each answer votes for, and the order the customer goes through.
 
 **Questions to answer.**
 
-- How do I add, rename, reorder and delete a question.
-- What is the difference between a single choice and a multiple choice question, and what does the
-  maximum number of selections do on a multiple choice question.
-- How do the answers display: the display mode of a question, and how pills, grids and stacked
-  layouts differ for the customer.
-- How do I add an image to a question, one for desktop and one for mobile, and what is the focal
-  point for.
-- What is **Auto-advance on answer**: on single choice questions the answer highlights briefly and
-  the quiz moves on with no **Next** button. Multiple choice questions always keep **Next**, and
-  **Back** stays available in both cases.
-- What is a **Content page** and when do I insert one: an editorial screen between questions, with no
-  answers.
-- How do I filter one question's answers from a previous question's answers.
-- What is the effect of reordering questions on quizzes already answered: none, past responses are
-  untouched.
+- How do I add, write and delete a question, and what does a new question arrive with.
+- What is the difference between a single choice and a multiple choice question, and what does
+  **Max selections** do once the customer reaches it.
+- How do the answers display: **Grid (pills, 2-3 columns)** against **Stacked (full-width list)**.
+- How do I add answers, why do they carry no image of their own, and why can they not be reordered.
+- How do I attach products to an answer, what do the **+1**, **+2** and **+3** weights do, and how
+  are the three winning products worked out.
+- What does **This answer excludes products** do, and why does a quiz whose product-bearing answers
+  all exclude refuse to publish.
+- How do I filter one question's answers from a previous question's answers, and why does the match
+  depend on the two labels being written identically, in every language.
+- How do I reorder the pages, and why does moving the welcome screen change nothing for the customer.
+- What are the capture fields of the welcome screen, and what does **Duplicate storage mapping** warn
+  about.
+- What is written on **Save** and what is written immediately, and why does **Discard** leave an
+  added page in the quiz.
 
-**Screenshots: 4.**
+**Screenshots: 6.**
 
-1. The **Questions** tab, sidebar showing the page sequence.
-2. The question settings panel with the type and the maximum selections.
-3. The answer display modes, one storefront capture per mode, side by side.
-4. A **Content page** in the editor with its body and image.
+1. The sidebar with the **Add page** menu open on **Question** and **Welcome**.
+2. The question settings panel: **Text**, **Type** on **Multiple choice** with **Max selections**,
+   and **Display mode**.
+3. The answer settings panel with **Product votes**, two products and their weight buttons.
+4. The same panel with **This answer excludes products** on, titled **Excluded products**, weights
+   gone.
+5. The sidebar with a welcome page, three questions and their answers, **Email gate** and
+   **Results** pinned at the bottom.
+6. The **Capture fields** section of the welcome screen with its rows, its reorder arrows, the quick
+   add buttons and **Add custom field**.
+
+**Not covered here.**
+
+- Question images, desktop and mobile, and their focal point. Out of the scope the page was written
+  to, still to be placed.
+- **Auto-advance on answer** and its delay. They live in the **Settings** and **Design** tabs, not on
+  the **Questions** tab, so they belong to the pages that document those tabs.
+- Content pages. Hidden in v1: the storefront widget does not render them, so they are offered
+  neither in the add menu nor in the sidebar. Document them when the widget supports them.
+- The effect of reordering questions on responses already collected. Not verified, so not written.
 
 ---
 
