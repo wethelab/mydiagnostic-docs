@@ -1,20 +1,33 @@
 ---
 sidebar_position: 2
 title: Add the theme block
-description: Place the myDiagnostic app block in your theme so the quiz renders on your online store.
+description: Open the theme editor from the app with the myDiagnostic Quiz block already added, place it where you want it, and save your theme.
 ---
 
 # Add the theme block
 
-The quiz reaches your customers through an app block that you place yourself in the theme editor.
-By the end of this page the block sits on the page you chose, it shows the quiz you chose, and the
-setup step is marked as done in the app.
+The app opens the theme editor with the **myDiagnostic Quiz** block already added and already
+selected, so there is nothing for you to insert. By the end of this page the block sits where you
+want it, it shows the quiz you chose, and the setup step is marked as done in the app.
 
 ## Before you start
 
-- A quiz in the app, in **Draft** or **Active**.
+- A quiz in the app.
 - Access to the theme editor of your online store.
 - An Online Store 2.0 theme, the only theme type that accepts app blocks.
+
+## Publish the quiz
+
+The block serves a quiz that is **Active** and nothing else. A quiz left in **Draft** is refused,
+whichever way the block points at it, so publish it before you place anything.
+
+The **Install on your storefront** card, in the **Settings** tab of the quiz, tells you which of the
+two you are on.
+
+- On a draft quiz the card reads **Quiz is in Draft. Publish it before installing on your
+  storefront.** and carries a **Publish** button.
+- On a published quiz it reads **Quiz is Active and ready to embed.** and carries an **Unpublish**
+  button.
 
 ## Copy your Quiz ID
 
@@ -35,44 +48,57 @@ refused by your browser, select the text in the field and copy it by hand.
   caption="The card sits at the top of the Settings tab, above the quiz name."
 />
 
-## Add the block in the theme editor
+## Open the theme editor
 
 myDiagnostic ships an app block called **myDiagnostic Quiz**. An app block is not a standalone
 section: it lives inside a section of your theme, and you move it around like any other block.
 
 1. Select **Open the theme editor** in the **Install on your storefront** card.
 2. Wait for the theme editor to open in a new tab, on the home page of your online store.
-3. Use the page selector at the top of the theme editor to open another page, if the quiz belongs
-   somewhere else.
-4. Select **Add section**, then **Apps**, then **myDiagnostic Quiz**.
-5. Drag the block in the left sidebar to the position you want on the page.
-6. Select **Save**.
+3. Find the **myDiagnostic Quiz** block in the left sidebar: it is already there, already selected,
+   and its settings panel is open beside the preview.
+4. Drag the block in the left sidebar to the position you want on the page.
+5. Select **Save**.
 
-The block can also be added from inside a section that accepts app blocks: select **Add block** in
-that section, then **Apps**, then **myDiagnostic Quiz**. Either way you are placing the same block,
-and you move it afterwards by dragging it in the left sidebar.
-
-The block carries no appearance settings. Colours, fonts, spacing and wording belong to the quiz
-itself, so they stay the same on every page you place the block on.
+The block is added for you, so you never need **Add block** or **Add section** to place it. Nothing
+reaches your online store until you select **Save**.
 
 <Screenshot
   src="/img/getting-started/theme-block-2.png"
   alt="The theme editor with the myDiagnostic Quiz block selected in the left sidebar and its settings panel open on the right."
-  caption="The settings panel holds one field, Quiz ID."
+  caption="Nothing here was added by hand: the block arrives in place, waiting to be moved and saved."
 />
 
-## Choose which quiz the block shows
+## The block settings panel
 
-The block has a single setting, **Quiz ID**, and it works in two modes.
+Select the **myDiagnostic Quiz** block in the left sidebar to open its panel again at any time.
 
-### Leave the field empty
+The panel holds the **Quiz ID** field, with help text under it restating what an empty field does
+and where an identifier is copied from. **Manage app** takes you back to myDiagnostic in your
+Shopify admin, and **Remove block** takes the block off the template you are editing.
+
+The block carries no appearance settings. Colours, fonts, spacing and wording belong to the quiz
+itself, so they stay the same everywhere you place the block.
+
+### Leave the Quiz ID field empty
 
 The block asks the app which quiz is published, and shows it. This works when exactly one quiz is
-published.
+published, and the theme editor preview shows you the quiz your customers will see.
 
-When no quiz is published, or when several are, the block shows nothing at all on your online
-store: the page renders as though the block were not there. The app never guesses which of several
-quizzes a customer should see.
+When several quizzes are published, the preview reads **You have 2 quizzes published. Paste the Quiz
+ID of the one to show in the block settings.**, with your own number of published quizzes in place
+of the 2. Your online store shows nothing at all: the app never guesses which of several quizzes a
+customer should see.
+
+When no quiz is published, the preview reads **Publish a quiz in the myDiagnostic app to show it
+here.** and your online store shows nothing at all.
+
+When the preview gets no answer from the app, it reads **Your quiz will appear on your live store.
+To preview it here, paste its Quiz ID in the block settings.** That one says nothing about your
+online store, which keeps serving the quiz as usual. Paste the Quiz ID into the field and the quiz
+appears in the preview.
+
+None of those three messages leaves the theme editor. A customer never sees any of them.
 
 ### Paste a Quiz ID
 
@@ -85,13 +111,23 @@ The block shows that one quiz, whatever else is published in the app.
 We recommend pasting the Quiz ID as soon as you have more than one quiz, so the page you are
 editing keeps showing the quiz you meant even after you publish another one.
 
-## Preview the quiz in the theme editor
+## Choose which templates carry the quiz
 
-The theme editor preview does not reach the app the way your live online store does, so the
-automatic mode is not previewed reliably there. The block shows a setup message instead of the
-quiz, and that message is visible to you in the editor only, never to a customer.
+The theme editor works one template at a time. The selector at the top of the editor names the
+template you are editing, **Home page** when the editor opens from the app.
 
-To see the quiz render inside the theme editor, paste its Quiz ID into the **Quiz ID** field.
+Change template with that selector and the block is already in the left sidebar there too: there is
+nothing to remove and nothing to add. Position it and select **Save** on every template you want the
+quiz on.
+
+A template covers every page built from it. Placing the block on **Default collection** puts the
+quiz on all of your collection pages, not on one of them.
+
+Each page is an independent session. A customer who starts the quiz on one page and then opens
+another page starts again from the first screen, with no answers carried over.
+
+Two quiz blocks on the same page do not work. The second block never gets past its loading
+indicator, whichever quiz it points at. Place one quiz block per page.
 
 ## Confirm the step in the app
 
@@ -129,23 +165,12 @@ badge reads **Active**.
 published, or several are. Publish exactly one quiz, or paste the Quiz ID of the quiz you want into
 the block.
 
-**The theme was not saved.** A block added in the theme editor reaches your online store only once
-you select **Save**. Reopen the theme editor and check that the block is still there.
+**The theme was not saved.** A block reaches your online store only once you select **Save**, on
+each template you placed it on. Reopen the theme editor and check that the block is still there.
 
 One delay is worth knowing about. When the **Quiz ID** field is empty, the app's answer is kept for
 one minute, so a quiz you published a moment ago can take up to a minute to appear. Wait a
 minute and reload the page before changing anything else.
-
-## Place the same quiz on several pages
-
-A quiz can live on as many pages as you want. Add the block to each page and paste the same Quiz ID
-into every one of them.
-
-Each page is an independent session. A customer who starts the quiz on one page and then opens
-another page starts again from the first screen, with no answers carried over.
-
-Two quiz blocks on the same page do not work. The second block stays empty, whichever quiz it
-points at. Place one quiz block per page.
 
 ## Next steps
 
