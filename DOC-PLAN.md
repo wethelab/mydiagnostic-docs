@@ -616,13 +616,20 @@ configuration is kept but the synchronisation is skipped, and it resumes on upgr
 - How does the app answer a customer data request coming from Shopify.
 - How does the app answer a customer deletion request coming from Shopify.
 - What happens to all shop data when the app is uninstalled.
+- How long is a response kept, and what happens at the end of that period: after 24 months the app
+  anonymises it automatically, every day, without anything to switch on. What that clears (name,
+  email address, age, language, capture field values, detailed answers) and what it keeps (the
+  response itself, its quiz, its scenario, its recommended products), so the figures on
+  **Analytics** stay intact.
+- How long the app keeps its own record of a data request or a deletion request: 12 months.
 - Which third parties receive data, and only when I connect them: Klaviyo, Mailchimp, and the mail
   server I configure.
 - Which privacy policy and terms links appear to my customers, and where I set them.
 - What I am responsible for: the consent sentence on the email gate, and the capture fields I choose
   to add.
 
-**Screenshots: 2.**
+**Screenshots: 2.** Unchanged. Automatic retention has no admin screen: it runs on a schedule and
+exposes no control, so it is written, not shown.
 
 1. The **Responses** tab with the export action.
 2. The compliance fields where the privacy policy and terms links are set.
@@ -782,9 +789,17 @@ document. Where an entry above and this list disagree, this list wins.
 6. Multi-language: Premium serves 1 secondary locale, Unlimited serves unlimited. After a
    downgrade, the excess locales stop being served and a notice naming them appears in the admin.
 7. The "Powered by" branding badge appears on Free only.
-8. DO NOT document: automatic response retention (the mechanism exists in the code but its
-   activation is not confirmed; promise nothing), the paused status, any cart or order
-   attribution, any conversion KPI.
+8. Automatic response retention IS active in production and IS documentable, confirmed on
+   24 August 2026: a scheduled Fly machine (`black-wave-5768`, image `curlimages/curl`) calls
+   `/api/cron/gdpr_purge` once a day, last observed run 23 August 2026. The job anonymises every
+   response older than the retention window, 24 months by default, and deletes the GDPR audit log
+   rows older than 12 months. Anonymising is not deleting: the name, the email address, the age,
+   the language and the capture field values are cleared, and so is the detailed answer history;
+   the row itself stays, with the quiz, the scenario and the recommended products, so response
+   counts and the scenario distribution keep their history. Both windows are operator settings,
+   not merchant ones: state the durations, never present them as something the merchant can change
+   in the app, and do not name the environment variables in the public pages. STILL DO NOT
+   document: the paused status, any cart or order attribution, any conversion KPI.
 9. Result screen, as implemented: product cards (280px max on desktop, 1 or 2 per row on mobile by
    setting), second image on hover (opt-in, only when the product has two images), price
    (opt-in), description from a product metafield, CTA in three modes (bundle / individual /
