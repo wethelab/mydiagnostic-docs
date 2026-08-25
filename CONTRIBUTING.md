@@ -58,6 +58,10 @@ the app displays it, with the app's own capitalisation:
 Never translate a label, never paraphrase it, never fix its capitalisation. If a label is wrong or
 unclear in the app, report it rather than correcting it in the documentation.
 
+When a label in the app contains an emoji, quote it without its emoji. The no-emoji rule wins over
+quoting a label exactly. For example, the tip icon selector is written **General**, **Morning**,
+**Evening**.
+
 Use the exact plan names when a limit is involved: Free, Basic, Pro, Premium, Unlimited.
 
 ## Forbidden

@@ -192,42 +192,9 @@ products each answer votes for, and the order the customer goes through.
 
 ---
 
-## 6. Result scenarios (Basic plan and above)
+## 6. Product matching
 
-`docs/building-quizzes/scenarios.mdx`, sidebar position 2 in Building quizzes.
-
-**Objective.** Explain the editorial layer of the result: a scenario is what turns three matched
-products into advice.
-
-**Questions to answer.**
-
-- What is a scenario: a title, a description, images, tips, and the trio of three products it
-  describes.
-- How does a scenario get selected: the quiz scores the answers, keeps the top three products, and
-  looks for the scenario whose trio is exactly those three.
-- What happens when no scenario matches the trio: the fallback scenario is shown instead, so a quiz
-  always has a result.
-- How many scenarios do I need to cover my catalogue, and how do I decide which trios are worth
-  writing.
-- How do I build a trio: choose three products, order them, and give each one a label.
-- What is a tip, how many can a scenario carry, and where do tips appear on the result.
-- Which images does a scenario take, desktop and mobile, and where do they show.
-- Why do I need the Basic plan or above to use scenarios at all.
-- How do I check which scenario a real customer landed on: the **Analytics** tab, scenario
-  distribution, see [Analytics](/docs/building-quizzes/analytics).
-
-**Screenshots: 4.**
-
-1. The **Scenarios** tab with several scenarios listed in the sidebar.
-2. The scenario editor showing title, description and tips.
-3. The trio picker with three products selected and labelled.
-4. The storefront result screen produced by that scenario.
-
----
-
-## 7. Product matching
-
-`docs/building-quizzes/product-matching.mdx`, sidebar position 3 in Building quizzes.
+`docs/building-quizzes/product-matching.mdx`, sidebar position 2 in Building quizzes.
 
 **Objective.** Explain the scoring model so a merchant can predict which products a set of answers
 returns.
@@ -252,6 +219,39 @@ returns.
 1. The answer panel with its attached products and their weights.
 2. The exclusion control on an answer.
 3. The preview showing the trio returned for a chosen set of answers.
+
+---
+
+## 7. Result scenarios (Basic plan and above)
+
+`docs/building-quizzes/scenarios.mdx`, sidebar position 3 in Building quizzes.
+
+**Objective.** Explain the editorial layer of the result: a scenario is what turns three matched
+products into advice.
+
+**Questions to answer.**
+
+- What is a scenario: a title, a description, images, tips, and the trio of three products it
+  describes.
+- How does a scenario get selected: the quiz scores the answers, keeps the top three products, and
+  looks for the scenario whose trio is exactly those three.
+- What happens when no scenario matches the trio: the visitor sees the quiz's generic result header
+  and their products, with no editorial content.
+- How many scenarios do I need to cover my catalogue, and how do I decide which trios are worth
+  writing.
+- How do I build a trio: choose three products, order them, and give each one a label.
+- What is a tip, how many can a scenario carry, and where do tips appear on the result.
+- Which images does a scenario take, desktop and mobile, and where do they show.
+- Why do I need the Basic plan or above to use scenarios at all.
+- How do I check which scenario a real customer landed on: the **Analytics** tab, scenario
+  distribution, see [Analytics](/docs/building-quizzes/analytics).
+
+**Screenshots: 4.**
+
+1. The **Scenarios** tab with several scenarios listed in the sidebar.
+2. The scenario editor showing title, description and tips.
+3. The trio picker with three products selected and labelled.
+4. The storefront result screen produced by that scenario.
 
 ---
 
