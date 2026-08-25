@@ -660,7 +660,7 @@ exposes no control, so it is written, not shown.
 **Objective.** Define every term the documentation uses, once, so no page has to define it again.
 
 **Terms to define.** Answer, app block, app embed, capture field, content page, default language,
-design token, email gate, exclusion, fallback scenario, permalink, plan, product trio, quiz, quiz ID,
+design token, email gate, exclusion, generic result, permalink, plan, product trio, quiz, quiz ID,
 question, response, result screen, scenario, scenario tip, secondary language, theme editor, weight,
 app wording.
 
@@ -717,7 +717,8 @@ publishing, and update in the same commit as any change to that grid.
   the block has no ID.
 - Visitors see a message saying the quiz is unavailable: the monthly response limit is reached.
 - The quiz shows the wrong products: the weights, the exclusions, or products missing from answers.
-- The result always shows the same scenario: no trio matches, so the fallback is served.
+- The result always shows the same scenario: no trio matches, so every visitor sees the quiz's
+  generic result header and their products, with no editorial content.
 - The colours or fonts do not follow my settings: a per page override is set, a mobile value is
   empty, or custom CSS is fighting the setting.
 - The quiz looks right on desktop and wrong on mobile: the mobile overrides.
