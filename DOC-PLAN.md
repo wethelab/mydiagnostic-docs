@@ -209,16 +209,14 @@ returns.
 - In which order does the quiz decide: exclusions first, then the three highest scoring products.
 - What happens on a tie, and what happens when fewer than three products survive.
 - How do I attach the same product to several answers, and does that double its chances.
-- How do I test a combination of answers without publishing, using the preview.
 - How does the result of the scoring meet the scenarios: the trio is matched against the scenario
   trios, see [Result scenarios](/docs/building-quizzes/scenarios).
 - What happens when a matched product is out of stock or deleted from the store.
 
-**Screenshots: 3.**
+**Screenshots: 2.**
 
 1. The answer panel with its attached products and their weights.
 2. The exclusion control on an answer.
-3. The preview showing the trio returned for a chosen set of answers.
 
 ---
 
