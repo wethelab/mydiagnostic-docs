@@ -1,8 +1,33 @@
 ---
 sidebar_position: 1
 title: Introduction
+description: What myDiagnostic does, how a quiz is put together, and what you need before building your first one.
 ---
 
 # Introduction
 
-myDiagnostic is a Shopify app that turns a guided quiz into a personalised product recommendation, with no code required.
+myDiagnostic is a Shopify app that turns a guided quiz into a personalised product recommendation,
+with no code required. A customer answers a few questions and reaches a result screen carrying the
+three products their answers chose, taken from the products already in your online store.
+
+A quiz is a sequence of screens you build yourself: an optional welcome screen, your questions, an
+optional email gate, and the result screen. Every answer votes for the products you attach to it,
+with a weight of **+1**, **+2** or **+3**, and an answer can instead exclude the products it never
+fits, so the three products holding the most votes are the ones the result shows. From the Basic
+plan a scenario answers a precise trio with an editorial page of its own, its title, description,
+image and tips, and a trio you wrote no scenario for still reaches the generic result. Every
+finished quiz is recorded as a response with a permanent address that reopens the same
+recommendation later, and the app can email that recommendation to the customer as soon as they
+finish.
+
+To begin you need a Shopify store with at least one product and an Online Store 2.0 theme, the only
+theme type that accepts app blocks. Install the app from the Shopify App Store, see
+[Install the app](/docs/getting-started/installation), then place the **myDiagnostic Quiz** block in
+a section of the page you want it on, see [Add the theme block](/docs/getting-started/theme-block).
+The app opens the theme editor with that block already added and already selected, and it asks for
+no access to your theme files.
+
+From there, Building quizzes covers what a quiz contains, starting with
+[Questions and answers](/docs/building-quizzes/questions-and-answers). Customising covers how it
+looks and how it reads, starting with [Design and tokens](/docs/customising/design-tokens).
+Reference holds the complete plan grid, in [Plan comparison](/docs/reference/plan-comparison).

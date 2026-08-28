@@ -48,10 +48,7 @@ customer, and where to start.
 - What is not required: no code, no theme edit beyond placing the block.
 - Where do I go next, depending on whether I am installing or already installed.
 
-**Screenshots: 2.**
-
-1. A finished quiz question on a storefront, in the demonstration store.
-2. The result screen of the same quiz, showing the three recommended products.
+**Screenshots: 0.** The screens are shown in the pages that cover them.
 
 ---
 
