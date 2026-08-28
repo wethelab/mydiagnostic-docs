@@ -734,10 +734,12 @@ publishing, and update in the same commit as any change to that grid.
 **Question format.** Each section states the symptom, then a short ordered list of checks, most
 likely cause first, each check ending in a concrete action.
 
-**Screenshots: 2.**
+**Screenshots: 1.**
 
-1. The unavailable message as a visitor sees it.
-2. The unsaved changes bar with **Save** and **Discard**.
+1. The unsaved changes bar with **Save** and **Discard**.
+
+The unavailable message as a visitor sees it is not captured: it cannot be reproduced on the
+demonstration store. The section quotes the message verbatim instead.
 
 ---
 
