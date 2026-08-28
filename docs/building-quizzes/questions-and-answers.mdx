@@ -53,6 +53,52 @@ text **How many answers can the user pick**, and it is the ceiling: once the cus
 many, the remaining answers stop responding until one of the picked answers is unpicked. **Next**
 stays disabled until at least one answer is picked.
 
+## Add an image to the question
+
+The **Images** section of the question panel sits under **Layout**, and it takes two uploads.
+
+**Desktop image** carries the help text **Shown on screens wider than 768 px**, and **Mobile image**
+carries **Shown on screens 768 px and narrower. Falls back to desktop if empty.**
+
+That fallback runs one way only. A phone shows the desktop image when you leave the mobile one
+empty, and a desktop never shows the mobile image, so upload the desktop image first and add a
+mobile one only when the framing needs it. Both go to your Shopify files the moment you pick the
+file, before any save.
+
+The section disappears when the question is set to carry no image at all. That happens in its
+**Layout** section: untick **Use global theme settings for this page**, then set **Image position**
+to **None (no image, content full-screen)**. The uploads go with it, since nothing would render
+them. That box sits on every page of the quiz and is what opens the per page overrides, see
+[Design tokens](/docs/customising/design-tokens).
+
+<Screenshot
+  src="/img/building-quizzes/questions-and-answers-7.png"
+  alt="The question settings panel with a desktop image set, and the preview showing the image beside the question."
+  caption="The Images section lives under Layout. The mobile slot falls back to the desktop image when left empty."
+/>
+
+## Where the image sits next to the question
+
+Placement belongs to the quiz rather than to the question. The **Layout** card of **Granular
+controls (advanced)**, on the **Design** tab, holds **Image position**, which decides the side the
+image takes, and **Image size**, which gives it between 20 and 70 percent of the width. The question
+and its answers take the rest, see [Design tokens](/docs/customising/design-tokens).
+
+A question with no image renders no image panel at all: its content takes the full width, whatever
+the position says. A quiz where only some questions carry an image alternates between the two
+layouts, which is expected and needs no setting.
+
+<Screenshot
+  src="/img/building-quizzes/questions-and-answers-8.png"
+  alt="A question on the storefront: the image fills the left half, the question and its answers sit on the right."
+  caption="With an image set, the question becomes a split layout. Without one, the content takes the full width."
+/>
+
+Below 768 px the two columns become one and the image goes above the content. The **Mobile** section
+of the question changes that for that question alone. **Show image on mobile** hides it, with the
+help text **Hide the question image on screens 767 px and narrower for this question only.**, and
+**Image position on mobile** offers **Top** or **Bottom**.
+
 ## Choose how the answers are displayed
 
 The **Answer Display** section holds one setting, **Display mode**, with the help text **How answer

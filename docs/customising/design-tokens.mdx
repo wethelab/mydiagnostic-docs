@@ -234,6 +234,22 @@ In practice that gives an order of work. Set the six numbered cards first, since
 quiz. Open **Granular controls (advanced)** only when one element has to differ from them. Go into a
 page's own settings only when that single screen has to differ from everything else.
 
+Reaching that third level takes one action. Every page of the quiz opens its panel on a checkbox
+titled **Use global theme settings for this page**, ticked by default and described as **When
+enabled, this page inherits all design tokens from the global Design page. Disable to override image
+visibility, layout mode, and other settings below.**
+
+Untick it and a block titled **Page-specific overrides** appears in its place, holding the controls
+that page is allowed to set for itself. On a question those are **Show image on desktop** and
+**Image position**, with **Content alignment (horizontal)** under them, joined by **Content
+alignment (vertical)** once the position is **None (no image, content full-screen)**. **Image
+position** is what decides the side a question image takes, see
+[Questions and answers](/docs/building-quizzes/questions-and-answers).
+
+Ticking the box again hands the page back to the global theme and keeps what you set. The values
+stay recorded and stop being applied, so unticking a second time brings them back as you left them,
+and trying an override costs nothing.
+
 Three **Reset** controls undo at three different scales:
 
 - **Reset color tokens to defaults**, at the bottom of **1. Colors**, puts the seven colour fields

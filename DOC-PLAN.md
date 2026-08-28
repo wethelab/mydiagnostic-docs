@@ -164,7 +164,7 @@ products each answer votes for, and the order the customer goes through.
 - What is written on **Save** and what is written immediately, and why does **Discard** leave an
   added page in the quiz.
 
-**Screenshots: 6.**
+**Screenshots: 8.**
 
 1. The sidebar with the **Add page** menu open on **Question** and **Welcome**.
 2. The question settings panel: **Text**, **Type** on **Multiple choice** with **Max selections**,
@@ -176,11 +176,16 @@ products each answer votes for, and the order the customer goes through.
    **Results** pinned at the bottom.
 6. The **Capture fields** section of the welcome screen with its rows, its reorder arrows, the quick
    add buttons and **Add custom field**.
+7. The question settings panel with a desktop image set, and the preview showing the image beside
+   the question.
+8. A question on the storefront, the image filling the left half and the question and its answers on
+   the right.
 
 **Not covered here.**
 
-- Question images, desktop and mobile, and their focal point. Out of the scope the page was written
-  to, still to be placed.
+- The focal point of a question image. The columns exist on the question, but the admin exposes no
+  control for them, so there is nothing for a merchant to do and nothing to document. The desktop
+  and mobile images themselves are now covered on the page.
 - **Auto-advance on answer** and its delay. They live in the **Settings** and **Design** tabs, not on
   the **Questions** tab, so they belong to the pages that document those tabs.
 - Content pages. Hidden in v1: the storefront widget does not render them, so they are offered
