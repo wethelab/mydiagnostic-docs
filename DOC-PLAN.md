@@ -573,8 +573,8 @@ configuration is kept but the synchronisation is skipped, and it resumes on upgr
 
 **Screenshots: 1.**
 
-1. The integrations card in the quiz **Settings**, one service connected, with the contact tag
-   field and the connection test result.
+1. The integrations card in the quiz **Settings** before connection, both services visible with
+   their fields empty, including the **Contact tag** field.
 
 **PlanBadge: Pro.**
 
