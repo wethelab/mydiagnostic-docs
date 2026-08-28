@@ -99,6 +99,27 @@ const config: Config = {
               label: 'Introduction',
               to: '/docs/introduction',
             },
+            {
+              label: 'Building quizzes',
+              to: '/docs/building-quizzes/questions-and-answers',
+            },
+            {
+              label: 'Troubleshooting',
+              to: '/docs/troubleshooting',
+            },
+          ],
+        },
+        {
+          title: 'Support',
+          items: [
+            {
+              label: 'Email support',
+              href: 'mailto:support@webesencia.com',
+            },
+            {
+              label: 'Frequently asked questions',
+              to: '/docs/faq',
+            },
           ],
         },
         {
