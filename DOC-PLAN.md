@@ -27,7 +27,7 @@ Inside a quiz, six tabs: **Questions**, **Scenarios**, **Design**, **Analytics**
 **Settings**.
 
 A quiz is **Draft** or **Active**. Page types in the quiz sidebar: **Welcome**, **Question**,
-**Content page**, **Email gate**, **Results**.
+**Email gate**, **Results**.
 
 ---
 
@@ -606,11 +606,13 @@ configuration is kept but the synchronisation is skipped, and it resumes on upgr
   ones are unpublished back to draft, and a banner in the app names them.
 - Where is the full feature grid: [Plan comparison](/docs/reference/plan-comparison).
 
-**Screenshots: 3.**
+**Screenshots: 2.**
 
 1. The **Plans & Billing** page with the current plan marked.
 2. The usage figure for the current month.
-3. The banner shown when the limit is reached.
+
+The banner shown when the limit is reached is not captured: it cannot be reproduced on the
+demonstration store. The page quotes both banner titles instead.
 
 ---
 
@@ -657,7 +659,7 @@ exposes no control, so it is written, not shown.
 
 **Objective.** Define every term the documentation uses, once, so no page has to define it again.
 
-**Terms to define.** Answer, app block, app embed, capture field, content page, default language,
+**Terms to define.** Answer, app block, app embed, capture field, default language,
 design token, email gate, exclusion, generic result, permalink, plan, product trio, quiz, quiz ID,
 question, response, result screen, scenario, scenario tip, secondary language, theme editor, weight,
 app wording.

@@ -8,3 +8,146 @@ description: Definitions of the myDiagnostic and Shopify terms used across this 
 
 Every term this documentation uses for a part of the app, a part of the Shopify admin, or a step of
 the quiz, defined once so you never have to guess what a page means.
+
+## Answer
+
+One of the choices a customer picks on a question. An answer carries its own wording, the products it
+votes for and their weight, and it can instead be set to exclude products, see
+[Questions and answers](/docs/building-quizzes/questions-and-answers).
+
+## App block
+
+The piece of myDiagnostic you place inside a page of your online store, called **myDiagnostic Quiz**.
+It is not a standalone page: you add it to a section of an existing template, and the quiz renders
+where you put it, see [Add the theme block](/docs/getting-started/theme-block).
+
+## App embed
+
+A Shopify extension a theme loads on every page of a store, switched on from the **App embeds** list
+of the theme editor. myDiagnostic has none: the quiz is placed page by page as an app block, so an
+empty App embeds list is expected and not a sign of a failed install, see
+[Add the theme block](/docs/getting-started/theme-block).
+
+## App wording
+
+The text the app supplies by itself, such as **Next**, **Sold out** or the message under an invalid
+email address, which you can override for your whole store and per language. It is the opposite of
+page content: page content is what you write on a quiz, and it always wins over app wording for the
+same string, see [App wording](/docs/customising/app-wording).
+
+## Capture field
+
+A box on the welcome screen that asks the customer for something before the quiz starts: a name, an
+age, an email address, a phone number, or a field of your own. Each field decides where its value is
+stored and whether it is required, see [Welcome screen](/docs/building-quizzes/welcome-screen).
+
+## Default language
+
+The language a quiz is written in, chosen when the quiz is created. It cannot be changed afterwards,
+it is what every untranslated string falls back to, and it is the language every customer reads when
+their own is not served, see [Secondary languages](/docs/distribution/secondary-languages).
+
+## Design token
+
+One of the store-wide appearance settings of a quiz: a colour, a font, a corner style, an animation
+setting. Tokens apply to the whole quiz, and a per page setting overrides them for one screen, see
+[Design and tokens](/docs/customising/design-tokens).
+
+## Email gate
+
+The screen shown between the last question and the result, asking the customer for their email
+address before the recommendation. It is what makes the result email possible, and the only screen
+carrying the marketing consent checkbox, see [Email gate](/docs/building-quizzes/email-gate).
+
+## Exclusion
+
+An answer set to rule products out instead of voting for them. An exclusion is absolute: a product
+ruled out by any answer the customer picked is removed before the points are counted, however many
+votes it collected, see [Product matching](/docs/building-quizzes/product-matching).
+
+## Generic result
+
+The result a customer gets when the three winning products match no scenario: the quiz's own result
+title and subtitle over the three product cards, with no editorial text and no tips. The response is
+recorded like any other, see [Result scenarios](/docs/building-quizzes/scenarios).
+
+## Permalink
+
+The permanent address of one customer's result, of the form
+`https://your-store.com/apps/mydiagnostic/result/<token>`. It reopens the same recommendation, it
+does not expire, and it is what the button in the result email points at, see
+[Result permalink](/docs/distribution/permalink).
+
+## Plan
+
+Your subscription level, from Free to Unlimited. It decides how many quizzes you may keep published,
+how many responses your quizzes may collect in a month, and which features you can use, see
+[Plans and quotas](/docs/account/plans-and-quotas).
+
+## Product trio
+
+The three products a scenario is attached to. A scenario is shown only when the three products a
+customer's answers produced are exactly the three of its trio, in any order, see
+[Result scenarios](/docs/building-quizzes/scenarios).
+
+## Question
+
+One screen of a quiz, holding the wording the customer reads and the answers they choose from. A
+question is either **Single choice** or **Multiple choice**, and it decides how its own answers are
+laid out, see [Questions and answers](/docs/building-quizzes/questions-and-answers).
+
+## Quiz
+
+One questionnaire: its pages, its questions and answers, its scenarios, its design and its own
+settings. A store can hold several, and your plan decides how many of them may be published at once,
+see [Create your first quiz](/docs/getting-started/first-quiz).
+
+## Quiz ID
+
+The identifier you paste into the theme block so it knows which quiz to render, copied for you by the
+**Install on your storefront** card. It is not the slug: the slug is the readable form the app
+derives from the quiz name and never asks you to type, which is why renaming a quiz carries the note
+**The public URL slug does not change.**, while the Quiz ID is the only identifier a screen ever asks
+you for, see [Add the theme block](/docs/getting-started/theme-block).
+
+## Response
+
+One completed run of a quiz by one customer: their answers, whatever they filled in, and the result
+they were given. A response is recorded when they submit, it counts against your monthly limit, and
+it is what the **Responses** tab lists, see [Plans and quotas](/docs/account/plans-and-quotas).
+
+## Result screen
+
+The last screen of a quiz: the product cards, the add to cart buttons and the copy around them.
+Every result renders in it, whether or not a scenario filled it with editorial content, see
+[Result screen](/docs/building-quizzes/result-screen).
+
+## Scenario
+
+A result page you write yourself, attached to one precise trio of products, with a title, a
+description, an image and tips. The result screen is the frame, the scenario is what goes in it for
+that particular trio, see [Result scenarios](/docs/building-quizzes/scenarios).
+
+## Scenario tip
+
+One short piece of advice listed under a scenario's description, each with its own text and icon.
+Tips belong to a scenario, so a customer only reads them when that scenario matched, see
+[Result scenarios](/docs/building-quizzes/scenarios).
+
+## Secondary language
+
+A language a quiz serves in addition to its default language. Adding one adds a translation tab next
+to every translatable field, and your plan decides how many a quiz may serve, see
+[Secondary languages](/docs/distribution/secondary-languages).
+
+## Theme editor
+
+The Shopify screen where you build the pages of your online store, and where the quiz block is
+placed and moved. The app opens it for you, with **Open the theme editor** in the **Install on your
+storefront** card, see [Add the theme block](/docs/getting-started/theme-block).
+
+## Weight
+
+How much a product gains when a customer picks the answer it is attached to: **+1**, **+2** or
+**+3**. A weight sizes a vote, where an exclusion cancels one: points decide the ranking, exclusions
+remove a product from it entirely, see [Product matching](/docs/building-quizzes/product-matching).
