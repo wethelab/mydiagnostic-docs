@@ -397,7 +397,7 @@ and per page overrides.
 2. The colour section, with a gradient control open.
 3. The typography section.
 4. The corner style options.
-5. A per page override panel, with the mobile controls visible.
+5. The **Quiz height** card, with its mobile controls visible.
 
 ---
 
