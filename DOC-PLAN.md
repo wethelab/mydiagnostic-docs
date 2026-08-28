@@ -426,8 +426,8 @@ writes on each page.
 
 **Screenshots: 3.**
 
-1. The **App wording** card with its groups collapsed.
-2. One group expanded, showing labels and their default placeholders.
+1. The **App wording** card, with its language select and its override counter.
+2. One group, showing its labels and their default placeholders.
 3. A storefront capture showing a changed button label in place.
 
 ---
