@@ -483,8 +483,8 @@ underlying email provider in the public documentation.
 
 **Screenshots: 1.**
 
-1. The **Email sending** card configured for a merchant server, with the connection test result
-   visible.
+1. The **Email sending** card in its default state, badge on **Sending via: app default**, with the
+   **Use your own SMTP server** section expanded on empty fields and no connection test.
 
 **PlanBadge: Pro** on the own-server section. The sender name and Reply-To are available on every
 plan and carry no badge.
