@@ -8,3 +8,112 @@ description: Short answers to the questions merchants ask before and after insta
 
 Short answers to the questions that come up before installing myDiagnostic and during the first weeks
 of use, each linking to the page that covers the subject in full.
+
+## Do I need a developer to install this?
+
+No. You install the app from the Shopify App Store, then place the quiz on a page yourself in the
+theme editor, by dragging a block into a section. There is no code to write and no file to touch, and
+the app never asks for access to your theme, see
+[Add the theme block](/docs/getting-started/theme-block).
+
+## Will it slow down my online store?
+
+The quiz loads only on the pages carrying its block, as one stylesheet and one script, and it asks
+the app for the quiz content in the background rather than holding the page back. The work of
+building the screens waits until the block is close to coming into view, so a quiz placed low on a
+long page costs a visitor who never scrolls that far almost nothing. A page without the block loads
+exactly as it did before, see [Add the theme block](/docs/getting-started/theme-block).
+
+## Can I put the quiz on more than one page, and can I run several quizzes at once?
+
+Yes to both. The same quiz can sit on as many pages as you like, since a block is placed per
+template, and a store can hold several quizzes. What your plan limits is how many of them are
+published at the same time, from one on Free to unlimited, see
+[Plans and quotas](/docs/account/plans-and-quotas).
+
+## Does the app modify my theme files?
+
+No. The app asks for no access to your theme: it cannot read the pages of your online store and it
+cannot change a theme file, which is why you place the block yourself. The quiz is an app block from
+an extension the app carries, so nothing of it is copied into your theme code, and uninstalling takes
+that extension with it, leaving a block that renders nothing until you remove it in the theme editor,
+see [Install the app](/docs/getting-started/installation).
+
+## Can I try it before paying, and what does the Free plan really allow?
+
+The Free plan is where every install starts, with no trial to run out and no card to enter. It gives
+you one published quiz at a time, 50 responses a month, and the **Powered by myDiagnostic** badge
+under the quiz, with drafts unlimited so you can build more than you publish. Nothing about the
+scoring, the questions or the design is held back, see
+[Plan comparison](/docs/reference/plan-comparison).
+
+## What happens to my quizzes if I downgrade or uninstall?
+
+A downgrade deletes nothing: quizzes above your new limit go back to draft, with a banner naming
+them, and everything you configured stays stored and comes back when you upgrade. An uninstall is the
+opposite: Shopify asks the app to delete your store data forty-eight hours later, quizzes, responses
+and collected addresses included, so export what you want to keep first, see
+[Data and privacy](/docs/account/data-and-privacy).
+
+## Does the quiz work on mobile?
+
+Yes, and it is built for it. A quiz you set up on a desktop screen already renders on a phone: the
+mobile settings inherit their desktop values until you change them, and a **Mobile responsive** card
+holds the sizes that apply below 768 px. The live preview has a **Mobile** view so you can check
+before publishing, see [Design and tokens](/docs/customising/design-tokens).
+
+## Can I use my own fonts and colours?
+
+Yes. The **Design** tab sets the colours, the fonts, the corner style and the animations of a quiz,
+from a list of thirteen font families or from a font you host yourself, and Pro adds custom CSS for
+anything the controls do not cover, see [Design and tokens](/docs/customising/design-tokens).
+
+## Does the app collect my customers' email addresses, and do I own that list?
+
+Addresses are collected only where you asked for them, at the email gate or in a capture field, and
+they are yours: the **Responses** tab lists them and **Export CSV** downloads the lot whenever you
+want, with no export limit and no plan gate on the export. The app uses them to send the result email
+and to sync the customers who consented to your email platform, and for nothing else, see
+[Data and privacy](/docs/account/data-and-privacy).
+
+## Can I send the collected addresses to my email platform?
+
+Yes, to Klaviyo or Mailchimp, from Pro upwards, connected per quiz with a contact tag and a second
+tag naming the result the customer reached. Only the customers who ticked the consent checkbox are
+sent, see [Klaviyo and Mailchimp](/docs/distribution/integrations).
+
+## Can the recommendation apply a discount?
+
+Yes, on the bundle button. Enter a discount code you created in Shopify and it is applied when the
+customer adds the whole recommendation to their cart. The app does not check that the code exists or
+still works, so test it yourself after creating it, see
+[Result screen](/docs/building-quizzes/result-screen).
+
+## How many products do I need for a quiz to be worth building?
+
+Enough for the answers to produce a trio: three products can fill a result, and a result of one or
+two products is served as well, with fewer cards. The interesting question is not the size of
+your catalogue but how many different trios your answers can realistically reach, since that is what
+decides how many scenarios are worth writing, see
+[Product matching](/docs/building-quizzes/product-matching).
+
+## In which languages can the quiz run?
+
+In the language you wrote it in on every plan, and in additional languages from Premium upwards,
+chosen from twenty-eight of the languages Shopify serves. A customer reads the version matching the
+language of your online store, and falls back to your default language when theirs is not served, see
+[Secondary languages](/docs/distribution/secondary-languages).
+
+## Does the app support right to left languages?
+
+Not yet. Arabic and Hebrew are absent from the language list on purpose: the quiz, the result page
+and the result email all lay text out from the left, so serving them would produce a page that reads
+backwards rather than a translated one. They will be offered once the layout handles them, see
+[Secondary languages](/docs/distribution/secondary-languages).
+
+## Where do I get help?
+
+Start with the symptom. The troubleshooting page takes the twelve problems merchants report most
+often from what you see on screen to the setting behind it, and every page of this site ends on the
+pages next to it. For anything the documentation does not answer, the support contact for the app is
+on its listing in the Shopify App Store, see [Troubleshooting](/docs/troubleshooting).
